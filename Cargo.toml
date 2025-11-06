@@ -1,0 +1,24 @@
+[package]
+name = "tauri-plugin-lan-scanner"
+version = "0.1.0"
+authors = ["Amble Sync"]
+description = "A Tauri plugin for discovering devices on the local network using mDNS."
+edition = "2021"
+rust-version = "1.77.2"
+exclude = ["/examples", "/dist-js", "/guest-js", "/node_modules"]
+links = "tauri-plugin-lan-scanner"
+repository = "https://github.com/shine-on-me/tauri-plugin-lan-scanner" # Assuming this will be the repo URL
+license = "MIT"
+keywords = ["tauri-plugin", "mdns", "lan", "network-discovery"]
+
+[dependencies]
+log = "0.4"
+mdns-sd = "0.16"
+tauri = { version = "2" }
+serde = { version = "1", features = ["derive"] }
+flume = "0.11"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }

@@ -1,0 +1,24 @@
+# The default permission set allows the plugin to function.
+[default]
+description = "Default permissions for the lan-scanner plugin"
+permissions = ["allow-start-scan", "allow-stop-scan", "allow-is-scanning", "allow-get-discovered-devices"]
+
+# Permission to use the start_scan command.
+[allow-start-scan]
+description = "Allows starting a LAN scan"
+permissions = ["plugin:lan-scanner|start_scan"]
+
+# Permission to use the stop_scan command.
+[allow-stop-scan]
+description = "Allows stopping a LAN scan"
+permissions = ["plugin:lan-scanner|stop_scan"]
+
+# Permission to use the is_scanning command.
+[allow-is-scanning]
+description = "Allows checking if a scan is in progress"
+permissions = ["plugin:lan-scanner|is_scanning"]
+
+# Permission to get the list of discovered devices.
+[allow-get-discovered-devices]
+description = "Allows retrieving the list of discovered devices"
+permissions = ["plugin:lan-scanner|get_discovered_devices"]
